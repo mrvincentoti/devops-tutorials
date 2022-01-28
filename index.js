@@ -3,11 +3,11 @@ const express = require("express");
 const app = express();
 
 //define port
-const port=3000;
+const port = 3000;
 
 app.get("/", (req, res) => {
 
-res.json({message:'Root page'})
+  res.json({ message: 'Root page' })
 
 })
 
@@ -15,11 +15,11 @@ res.json({message:'Root page'})
 
 app.get("/get-data", (req, res) => {
 
-res.json({message:'Get JSON Example'})
+  res.json({ message: 'Get JSON Example' })
 
 })
 
 //run the application
 app.listen(port, () => {
-  console.log(`running at port ${port}`);
+  console.log(`application running at port ${port}`);
 });
