@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t voti/devopsapp:latest .'
+				sh 'sudo docker build -t voti/devopsapp:latest .'
 			}
 		}
 
@@ -25,14 +25,14 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push voti/devopsapp:latest'
+				sh 'sudo docker push voti/devopsapp:latest'
 			}
 		}
 	}
 
 	post {
 		always {
-			sh 'docker logout'
+			sh 'sudo docker logout'
 		}
 	}
 
